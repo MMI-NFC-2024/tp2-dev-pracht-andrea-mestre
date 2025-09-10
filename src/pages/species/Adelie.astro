@@ -1,0 +1,5 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import penguins from "../../assets/penguins.json";
+const penguinsAdelie = penguins.filter(({ species }) => species === "Adelie");
+---
