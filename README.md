@@ -3,5 +3,5 @@
 - URL Notebook Observable :
 - Nom :MESTRE
 - Prénom : Andrea
-
+- J'avais un problème avec la publication netlify j'ai donc perdu du temps lors du tp de mercredi
 # Remarques :
