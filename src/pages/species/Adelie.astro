@@ -20,7 +20,7 @@ const penguinsAdelie = penguins.filter(({ species }) => species === "Adelie");
                 <PlotFigure
                     options={{
                         marks: [
-                            Plot.dot(penguins, {
+                            Plot.dot(penguinsAdelie, {
                                 x: "culmen_length_mm",
                                 y: "culmen_depth_mm",
                             }),
