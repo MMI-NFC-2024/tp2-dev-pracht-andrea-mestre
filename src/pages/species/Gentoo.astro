@@ -3,21 +3,22 @@ import Layout from "../../layouts/Layout.astro";
 import penguins from "../../assets/penguins.json";
 import PlotFigure from "../../components/PlotFigure.astro";
 import * as Plot from "@observablehq/plot";
-const penguinsAdelie = penguins.filter(({ species }) => species === "Adelie");
+const penguinsGentoo = penguins.filter(({ species }) => species === "Gentoo");
 ---
 
 <Layout>
     <section class="max-w-3xl mx-auto mb-12">
-        <h2 class="text-2xl font-bold mb-4 text-purple-900 text-center border-b-2 border-purple-300 pb-2 uppercase">
-            Penguins Adelie
+        <h2 class="text-2xl font-bold mb-4 text-red-900 text-center border-b-2 border-red-300 pb-2 uppercase italic">
+            Penguins Gentoo
         </h2>
-
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center border border-gray-100">
+        <div
+            class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center border border-gray-100"
+        >
             <div class="w-full flex justify-center overflow-x-auto">
                 <PlotFigure
                     options={{
                         marks: [
-                            Plot.dot(penguinsAdelie, {
+                            Plot.dot(penguinsGentoo, {
                                 x: "culmen_length_mm",
                                 y: "culmen_depth_mm",
                             }),
