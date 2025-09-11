@@ -1,9 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import penguins from "../../assets/penguins.json";
-import PlotFigure from "../../components/PlotFigure.astro";
-import * as Plot from "@observablehq/plot";
-const penguinsChinstrap = penguins.filter(({ species }) => species === "Chinstrap");
+import GraphicSpecies from "../../components/GraphicSpecies.astro";
 ---
 
 <Layout>
@@ -11,22 +8,6 @@ const penguinsChinstrap = penguins.filter(({ species }) => species === "Chinstra
         <h2 class="text-2xl mb-4 text-green-700 text-center border-b-2 border-green-300 pb-2 uppercase">
             Penguins Chinstrap
         </h2>
-
-        <div
-            class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center border border-gray-100"
-        >
-            <div class="w-full flex justify-center overflow-x-auto">
-                <PlotFigure
-                    options={{
-                        marks: [
-                            Plot.dot(penguinsChinstrap, {
-                                x: "culmen_length_mm",
-                                y: "culmen_depth_mm",
-                            }),
-                        ],
-                    }}
-                />
-            </div>
-        </div>
+        <GraphicSpecies species="Chinstrap" />
     </section>
 </Layout>
